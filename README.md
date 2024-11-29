@@ -1,2 +1,9 @@
 # App-Calculadora-de-Promedios
- Esta práctica es una aplicación en Dart y Flutter que implementa una calculadora de  promedios. 
+<p>Esta práctica es una aplicación en Dart y Flutter que implementa una calculadora de promedios. La aplicación utiliza los elementos estándar de Flutter, como <code>MaterialApp</code>, <code>Scaffold</code> y <code>AppBar</code>, para crear una interfaz de usuario. La funcionalidad principal se encuentra dentro de un widget <code>StatefulWidget</code> llamado <code>MyHomePage</code>, que gestiona el estado mutable de la aplicación.</p>
+
+<p>Una característica destacada de esta implementación es el uso de aislamientos (<em>isolates</em>) para calcular el promedio de un conjunto de números aleatorios de forma concurrente. En el método <code>_updateAverage()</code>, se crean varios aislamientos para calcular los promedios de forma paralela, lo que mejora la eficiencia del proceso de cálculo. Además, se utiliza un <code>Completer</code> junto con un <code>Future</code> para sincronizar la finalización del cálculo y actualizar la interfaz de usuario con el resultado.</p>
+
+<p>Sin embargo, el código presenta algunas posibles áreas de mejora. En primer lugar, no maneja explícitamente errores o excepciones que puedan surgir durante el cálculo del promedio en los aislamientos, lo que podría afectar la robustez de la aplicación. Además, la gestión de recursos de los aislamientos no está completamente tratada, lo que podría llevar a pérdidas de recursos o fugas de memoria si no se maneja adecuadamente la terminación de los aislamientos.</p>
+
+<p>Otra consideración importante es la eficiencia del cálculo del promedio, especialmente en dispositivos con recursos limitados. Dependiendo del tamaño del conjunto de números aleatorios generados en cada aislamiento, la comunicación de datos entre los aislamientos y el hilo principal podría introducir una sobrecarga significativa, lo que podría impactar el rendimiento de la aplicación.</p>
+
