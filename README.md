@@ -6,4 +6,3 @@
 <p>Sin embargo, el código presenta algunas posibles áreas de mejora. En primer lugar, no maneja explícitamente errores o excepciones que puedan surgir durante el cálculo del promedio en los aislamientos, lo que podría afectar la robustez de la aplicación. Además, la gestión de recursos de los aislamientos no está completamente tratada, lo que podría llevar a pérdidas de recursos o fugas de memoria si no se maneja adecuadamente la terminación de los aislamientos.</p>
 
 <p>Otra consideración importante es la eficiencia del cálculo del promedio, especialmente en dispositivos con recursos limitados. Dependiendo del tamaño del conjunto de números aleatorios generados en cada aislamiento, la comunicación de datos entre los aislamientos y el hilo principal podría introducir una sobrecarga significativa, lo que podría impactar el rendimiento de la aplicación.</p>
-
